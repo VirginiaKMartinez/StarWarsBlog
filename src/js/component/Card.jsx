@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import "../../styles/Card.css";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 function Card(props) {
 	const { store, actions } = useContext(Context);
@@ -34,9 +35,9 @@ function Card(props) {
 						{props.labelText3} {props.text3}
 					</p>
 					<div className="downButtons">
-						<a href="#" className="btn btn-outline-primary">
+						<Link to={"/" + props.section + "/" + props.id} className="btn btn-outline-primary">
 							Learn more!
-						</a>
+						</Link>
 						<button type="button" className="btn btn-outline-warning">
 							<i
 								className="far fa-heart"
@@ -68,7 +69,9 @@ Card.propTypes = {
 	labelText3: PropTypes.string,
 	text1: PropTypes.string,
 	text2: PropTypes.string,
-	text3: PropTypes.string
+	text3: PropTypes.string,
+	id: PropTypes.number,
+	section: PropTypes.string
 };
 
 export default Card;

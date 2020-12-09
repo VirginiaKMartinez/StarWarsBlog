@@ -17,7 +17,9 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light">
 			<a className="navbar-brand" href="#">
-				<img src={SWlogo} width="30" a height="30" alt="star wars logo" id="logo" />
+				<Link to={"/"}>
+					<img src={SWlogo} width="30" a height="30" alt="star wars logo" id="logo" />
+				</Link>
 			</a>
 			<Dropdown isOpen={dropdown} toggle={openCloseDropdown}>
 				<DropdownToggle caret className="dropdownButton">

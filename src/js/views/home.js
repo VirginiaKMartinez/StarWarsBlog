@@ -4,7 +4,6 @@ import "../../styles/home.scss";
 import { Context } from "../store/appContext";
 //COMPONENTS
 import Card from "../component/Card.jsx";
-import Navbar from "../component/navbar.js";
 
 function Home() {
 	const { store, actions } = useContext(Context);
@@ -17,7 +16,6 @@ function Home() {
 	console.log("PLANETS", store.planets);
 	return (
 		<div>
-			<Navbar />
 			<div className="container-fluid">
 				<div className="characters">
 					<h2>Characters</h2>
@@ -33,6 +31,8 @@ function Home() {
 									text1={character.gender}
 									text2={character.eye_color}
 									text3={character.hair_color}
+									id={index}
+									section="character"
 								/>
 							);
 						})}
@@ -51,6 +51,8 @@ function Home() {
 										labelText2={"Terrain: "}
 										text1={planets.population}
 										text2={planets.terrain}
+										id={index}
+										section="planets"
 									/>
 								);
 							})}
