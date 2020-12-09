@@ -20,34 +20,51 @@ const Detail = () => {
 	if (params.section == "character") {
 		return (
 			<div>
-				<img src="https://dummyimage.com/800x600/000/fff" alt="photo" />
-				<h2>{DataInfo.name} </h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<div className="row">
+					<img src="https://dummyimage.com/800x600/000/fff" alt="photo" className="imageDetail" />
+					<div className="titleDetailDescription">
+						<h2>{DataInfo.name} </h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+							voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
 				<hr />
+				<div className="row dataBelow">
+					<div>
+						<h5>Name</h5>
+						<p>{DataInfo.name}</p>
+					</div>
 
-				<h5>Name</h5>
-				<p>{DataInfo.name}</p>
+					<div>
+						<h5>Birth Year</h5>
+						<p>{DataInfo.birth_year}</p>
+					</div>
 
-				<h5>Birth Year</h5>
-				<p>{DataInfo.birth_year}</p>
+					<div>
+						<h5>Gender</h5>
+						<p>{DataInfo.gender}</p>
+					</div>
 
-				<h5>Gender</h5>
-				<p>{DataInfo.gender}</p>
+					<div>
+						<h5>Height</h5>
+						<p>{DataInfo.height}</p>
+					</div>
 
-				<h5>Height</h5>
-				<p>{DataInfo.height}</p>
+					<div>
+						<h5>Skin Color</h5>
+						<p>{DataInfo.skin_color}</p>
+					</div>
 
-				<h5>Skin Color</h5>
-				<p>{DataInfo.skin_color}</p>
-
-				<h5>Eye Color</h5>
-				<p>{DataInfo.eye_color}</p>
+					<div>
+						<h5>Eye Color</h5>
+						<p>{DataInfo.eye_color}</p>
+					</div>
+				</div>
 			</div>
 		);
 	} else {

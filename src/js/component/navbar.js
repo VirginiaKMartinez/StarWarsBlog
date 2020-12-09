@@ -29,7 +29,7 @@ const Navbar = () => {
 					{store.favorite.length > 0 ? (
 						store.favorite.map((favorite, index) => {
 							return (
-								<DropdownItem key={index}>
+								<DropdownItem key={index} id="favoriteAndTrash">
 									{favorite}
 									<i
 										id="delete"
