@@ -20,11 +20,11 @@ const Detail = () => {
 	if (params.section == "character") {
 		return (
 			<div>
-				<div className="row">
+				<div className="row justify-content-center imgAndTitleDecription">
 					<img src="https://dummyimage.com/800x600/000/fff" alt="photo" className="imageDetail" />
 					<div className="titleDetailDescription">
 						<h2>{DataInfo.name} </h2>
-						<p>
+						<p className="textDetail">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -70,33 +70,46 @@ const Detail = () => {
 	} else {
 		return (
 			<div>
-				<img src="https://dummyimage.com/800x600/000/fff" alt="photo" />
-				<h2>{DataInfo.name} </h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<div className="row justify-content-center imgAndTitleDecription">
+					<img src="https://dummyimage.com/800x600/000/fff" alt="photo" className="imageDetail" />
+					<div className="titleDetailDescription">
+						<h2>{DataInfo.name} </h2>
+						<p className="textDetail">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+							voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
 				<hr />
-				<h5>Name</h5>
-				<p>{DataInfo.name}</p>
-
-				<h5>Climate</h5>
-				<p>{DataInfo.climate}</p>
-
-				<h5>Population</h5>
-				<p>{DataInfo.population}</p>
-
-				<h5>Orbital Period</h5>
-				<p>{DataInfo.orbital_period}</p>
-
-				<h5>Rotation Period</h5>
-				<p>{DataInfo.rotation_period}</p>
-
-				<h5>Diameter</h5>
-				<p>{DataInfo.diameter}</p>
+				<div className="row dataBelow">
+					<div>
+						<h5>Name</h5>
+						<p>{DataInfo.name}</p>
+					</div>
+					<div>
+						<h5>Climate</h5>
+						<p>{DataInfo.climate}</p>
+					</div>
+					<div>
+						<h5>Population</h5>
+						<p>{DataInfo.population}</p>
+					</div>
+					<div>
+						<h5>Orbital Period</h5>
+						<p>{DataInfo.orbital_period}</p>
+					</div>
+					<div>
+						<h5>Rotation Period</h5>
+						<p>{DataInfo.rotation_period}</p>
+					</div>
+					<div>
+						<h5>Diameter</h5>
+						<p>{DataInfo.diameter}</p>
+					</div>
+				</div>
 			</div>
 		);
 	}

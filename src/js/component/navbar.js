@@ -23,21 +23,23 @@ const Navbar = () => {
 			</a>
 			<Dropdown isOpen={dropdown} toggle={openCloseDropdown}>
 				<DropdownToggle caret className="dropdownButton">
-					Favorites <Badge color="light">{store.favorite.length}</Badge>
+					Favorites <Badge color="light" className="badge">{store.favorite.length}</Badge>
 				</DropdownToggle>
 				<DropdownMenu right>
 					{store.favorite.length > 0 ? (
 						store.favorite.map((favorite, index) => {
 							return (
-								<DropdownItem key={index} id="favoriteAndTrash">
-									{favorite}
-									<i
-										id="delete"
-										className="far fa-trash-alt pointer"
-										onClick={() => {
-											actions.deleteFavorite({ index });
-										}}
-									/>
+								<DropdownItem key={index}>
+									<div className="favAndTrash">
+										{favorite}
+										<i
+											id="delete"
+											className="far fa-trash-alt pointer trash"
+											onClick={() => {
+												actions.deleteFavorite({ index });
+											}}
+										/>
+									</div>
 								</DropdownItem>
 							);
 						})
