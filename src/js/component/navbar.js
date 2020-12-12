@@ -23,7 +23,10 @@ const Navbar = () => {
 			</a>
 			<Dropdown isOpen={dropdown} toggle={openCloseDropdown}>
 				<DropdownToggle caret className="dropdownButton">
-					Favorites <Badge color="light" className="badge">{store.favorite.length}</Badge>
+					Favorites{" "}
+					<Badge color="light" className="badge">
+						{store.favorite.length}
+					</Badge>
 				</DropdownToggle>
 				<DropdownMenu right>
 					{store.favorite.length > 0 ? (

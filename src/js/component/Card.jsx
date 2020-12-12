@@ -9,11 +9,7 @@ function Card(props) {
 	const [selected, setSelected] = useState({
 		heart: "far fa-heart"
 	});
-	const handelHeart = () => {
-		setSelected({
-			heart: "fas fa-heart"
-		});
-	};
+
 	return (
 		<div>
 			<div className="card">
@@ -38,22 +34,18 @@ function Card(props) {
 						<Link to={"/" + props.section + "/" + props.id} className="btn btn-outline-primary">
 							Learn more!
 						</Link>
-						<button type="button" className="btn btn-outline-warning">
-							<i
-								className="far fa-heart"
-								onClick={() => {
-									actions.addFavorite(props.name);
-									store.favorite.map((favorite, index) => {
-										return (
-											<div key={index}>
-												<ul className="list-group">
-													<li className="list-group-item">{favorite}</li>
-												</ul>
-											</div>
-										);
-									});
-								}}
-							/>
+						<button
+							type="button"
+							className="btn btn-outline-warning"
+							id="heart"
+							onClick={() => {
+								actions.addFavorite(props.name);
+							}}>
+							{store.favorite.includes(props.name) ? (
+								<i className="fas fa-heart" />
+							) : (
+								<i className="far fa-heart" />
+							)}
 						</button>
 					</div>
 				</div>
